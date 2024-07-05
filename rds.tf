@@ -10,12 +10,12 @@ resource "aws_db_instance" "default" {
   skip_final_snapshot  = true
 }
 resource "aws_instance" "instance1" {
-  ami                         = "ami-06c68f701d8090592"
+  ami                         = "ami-0195204d5dce06d99"
   instance_type               = "t2.micro"
   count                       = 1
   key_name                    = "test"
-  vpc_security_group_ids     = ["sg-01aaac6b43fd22d1a"]
-  subnet_id                   = "subnet-0de5d353d87f41a09"
+  vpc_security_group_ids     = ["sg-0640ac226b79673e7"]
+  subnet_id                   = "subnet-001dafb658ac7d5b2"
   associate_public_ip_address = true
   user_data                   = "${file("data.sh")}"
 
