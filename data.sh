@@ -9,7 +9,7 @@ usermod -a -G docker ec2-user
 curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
+cd/tmp/
 cat <<EOF > docker-compose.yml
 services:
   db:
@@ -44,5 +44,5 @@ volumes:
   db_data:
   wordpress_data:
 EOF
-
+cd/tmp/
 sudo docker-compose -p my_project up
