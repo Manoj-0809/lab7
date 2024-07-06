@@ -10,6 +10,6 @@ resource "aws_instance" "instance1" {
   user_data                   = "${file("data.sh")}"
 
   tags = {
-    Name = "demoinstance"
+    Name = "klin"
   }
 }
